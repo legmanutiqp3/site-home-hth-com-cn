@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://legmanutiqp3.github.io/site-home-hth-com-cn/sitemap.xml
