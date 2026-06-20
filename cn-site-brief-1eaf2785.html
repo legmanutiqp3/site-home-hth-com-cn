@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>28圈 · 主题知识索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f6fa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1e232b;
+    }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: #0b1a2b;
+      color: #e9edf2;
+      padding: 64px 24px 56px;
+      text-align: center;
+      border-bottom: 4px solid #3b82f6;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: #6d9eff;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #bdc9db;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      margin-top: 28px;
+      background: #1e3a5f;
+      color: #b6d0f0;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* 正文区卡片 */
+    .content-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      padding: 48px 0 56px;
+    }
+
+    .section-title {
+      font-size: 1.65rem;
+      font-weight: 500;
+      color: #0b1a2b;
+      border-left: 6px solid #3b82f6;
+      padding-left: 18px;
+      margin-bottom: 24px;
+    }
+
+    .card-panel {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      padding: 32px 36px;
+    }
+
+    .card-panel p {
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .card-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .feature-item {
+      background: #f8faff;
+      padding: 20px 16px;
+      border-radius: 16px;
+      border: 1px solid #e7edf6;
+    }
+
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1a2a3f;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #3f4d62;
+    }
+
+    .highlight-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #93b4f0;
+    }
+
+    .highlight-link:hover {
+      color: #1d4ed8;
+      border-bottom: 1px solid #2563eb;
+    }
+
+    .tip-box {
+      background: #eaf1fe;
+      border-radius: 18px;
+      padding: 24px 30px;
+      border-left: 6px solid #2563eb;
+      margin: 28px 0 12px;
+    }
+
+    .tip-box p {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .faq-mini {
+      margin-top: 36px;
+    }
+
+    .faq-mini details {
+      margin-bottom: 14px;
+      background: #f1f5fb;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid #dfe8f2;
+    }
+
+    .faq-mini summary {
+      font-weight: 600;
+      cursor: pointer;
+      color: #0b1a2b;
+      font-size: 1rem;
+    }
+
+    .faq-mini details p {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      color: #2c3e56;
+      padding-left: 4px;
+    }
+
+    .info-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 30px;
+      border-top: 1px solid #dce3ed;
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #556478;
+    }
+
+    .info-footer a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .info-footer a:hover {
+      border-bottom: 1px solid #2563eb;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .card-panel {
+        padding: 24px 20px;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .tip-box {
+        padding: 20px 18px;
+      }
+      .wrapper {
+        padding: 0 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrapper">
+      <h1>关于 <span>28圈</span> 的知识库</h1>
+      <p>一份围绕关键词展开的结构化说明 · 信息聚合与常见概念索引</p>
+      <div class="badge">主题索引 · 非官方</div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <div class="content-grid">
+
+      <!-- 说明区域 -->
+      <section>
+        <h2 class="section-title">什么是 28圈</h2>
+        <div class="card-panel">
+          <p>「<a href="https://cn-site-28circle.com" class="highlight-link">28圈</a>」是一个在特定信息生态中被反复提及的标识符，围绕它衍生了多层次的讨论、资料整理和工具聚合。本索引页以知识库入口的形式，将相关说明、常见疑问以及可参考的信息分类列出，方便快速了解主题脉络。</p>
+          <p>28圈 并非单一产品或服务，而更像一个跨平台的内容集合概念。在多个公开讨论区、技术文档和社区记录中，它常被用作关键词或分类标签。本站点提供的是经过筛选的说明性内容，不涉及任何操作引导或推广。</p>
+        </div>
+      </section>
+
+      <!-- 特点 / 信息分区 -->
+      <section>
+        <h2 class="section-title">主题特点</h2>
+        <div class="card-panel">
+          <div class="feature-grid">
+            <div class="feature-item">
+              <h3>分类聚合</h3>
+              <p>相关内容按话题、类型和来源整理，便于按需浏览，减少信息过载。</p>
+            </div>
+            <div class="feature-item">
+              <h3>概念说明</h3>
+              <p>围绕 28圈 衍生的术语和背景均有简要解释，适合新接触者参考。</p>
+            </div>
+            <div class="feature-item">
+              <h3>社区记录</h3>
+              <p>收录来自公开讨论的常见问答、经验整理，保持信息透明。</p>
+            </div>
+            <div class="feature-item">
+              <h3>持续梳理</h3>
+              <p>索引内容会随公开信息的更新而做适配性调整，保持基本时效。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 场景 / 提示区 -->
+      <section>
+        <h2 class="section-title">参考场景与提示</h2>
+        <div class="card-panel">
+          <p>如果你正在查找关于 <strong>28圈</strong> 的背景资料、定义说明、或希望了解该关键词在哪些讨论语境中出现，下面的提示可能对你有帮助：</p>
+          <ul style="margin: 12px 0 20px 24px; color: #2c3e56;">
+            <li style="margin-bottom: 8px;">查阅公开的技术文档、社区置顶帖或归档页面，其中常有对 28圈 的出处说明。</li>
+            <li style="margin-bottom: 8px;">部分数据整理平台将 28圈 作为标签索引，可交叉对比信息。</li>
+            <li style="margin-bottom: 8px;">注意区分不同时期、不同平台上的同名指代，避免混淆。</li>
+          </ul>
+          <div class="tip-box">
+            <p>
+              <span style="font-size: 1.4rem; line-height: 1;">📘</span>
+              <span>对于初次接触该主题的用户，建议先从分类说明和 FAQ 摘要部分开始阅读，建立基本认知后再深入了解细节。本页内容仅作信息索引，不构成任何建议或评价。</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ 摘要 -->
+      <section>
+        <h2 class="section-title">常见疑问摘要</h2>
+        <div class="card-panel faq-mini">
+          <details>
+            <summary>“28圈” 具体指什么？</summary>
+            <p>它是多个社区与信息源中一个重复出现的关键词，通常用于指代某类话题集合或分类标识。具体含义需结合上下文判断，本索引页只做客观呈现。</p>
+          </details>
+          <details>
+            <summary>如何找到关于 28圈 的更多背景？</summary>
+            <p>你可以通过 <a href="https://cn-site-28circle.com" class="highlight-link">28圈</a> 相关站点获取原始说明和聚合列表。另外，在公开论坛、归档站和协作文档中也有不少讨论。</p>
+          </details>
+          <details>
+            <summary>这个索引页是官方来源吗？</summary>
+            <p>不是。本页是一个基于公开信息整理的知识库入口，目的是提供结构化的说明和索引，不设官方立场。所有内容均可查证。</p>
+          </details>
+          <details>
+            <summary>信息多久更新一次？</summary>
+            <p>视公开资料的变动情况不定期调整。主要修订会体现在说明、提示和链接部分，保持内容基本同步。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 相关信息区 -->
+      <section>
+        <h2 class="section-title">相关信息</h2>
+        <div class="card-panel" style="padding-bottom: 28px;">
+          <p>如果你希望深入了解 <strong>28圈</strong> 的具体文档、归档或社区索引，可以参考以下线索：</p>
+          <ul style="margin: 16px 0 8px 24px; color: #2c3e56;">
+            <li>公开的技术说明与分类索引页面</li>
+            <li>跨平台的话题聚合与讨论串</li>
+            <li>长期维护的社区 wiki 或协作文档</li>
+          </ul>
+          <p style="margin-top: 18px;">更详细的原始资料可直接查阅 <a href="https://cn-site-28circle.com" class="highlight-link">28圈</a> 所收录的内容集合，那里保留了更完整的上下文和条目分类。</p>
+        </div>
+      </section>
+
+      <div class="info-footer">
+        <span>知识库入口 · 内容基于公开信息整理</span>
+        <span><a href="https://cn-site-28circle.com">28圈</a> 相关站点</span>
+      </div>
+
+    </div>
+  </main>
+
+  <footer style="background: #e2e8f0; padding: 16px 0; text-align: center; font-size: 0.85rem; color: #3f4d62; border-top: 1px solid #cbd5e1;">
+    <div class="wrapper">
+      本页仅作为主题说明与索引参考，不涉及具体操作指引。
+    </div>
+  </footer>
+</body>
+</html>
